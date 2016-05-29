@@ -303,3 +303,15 @@ input.mdl-button[type="submit"] {
 .mdl-button .material-icons {
   vertical-align: middle;
 }
+
+.mdl-button--floating-action {
+  background: #F5D76E !important;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 998;
+  a {
+    color: #333;
+  }
+}

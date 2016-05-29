@@ -19,6 +19,8 @@ github_username:  j-paulino
 
 comments: true
 
+categories: ['html', 'css']
+
 # Conversion
 markdown:    kramdown
 

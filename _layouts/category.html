@@ -4,12 +4,12 @@ layout: default
 <h3 class="jp-page-tile">Musings on...
     <div class="jp-pill-box">
         {% for cat in site.categories %}
-            <span class="jp-pill" ><a href="/categories/{{cat[0]}}/">{{cat[0]}}</a></span>
+        <span class="jp-pill {%if cat[0] == page.category%}active{% endif %}"><a href="/categories/{{cat[0]}}/">{{cat[0]}}</a></span>
         {% endfor %}
     </div>
 </h3>
 <div class="jp-post-list">
-    {% for post in site.posts %}
+    {% for post in site.categories[page.category] %}
     <div class="jp-post">
         <div class="jp-post-header">
             <div class="jp-post-list--title">
@@ -24,11 +24,11 @@ layout: default
                 </div>
             </div>
             {% if post.categories | length %}
-                <div class="jp-post-list--categories">
-                    {% for category in post.categories %}
+            <div class="jp-post-list--categories">
+                {% for category in post.categories %}
                     <a href="/categories/{{ category }}/">#{{category}}</a>
-                    {% endfor %}
-                </div>
+                {% endfor %}
+            </div>
             {% endif %}
         </div>
         <p style="flex-flow: column wrap;">{{post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
