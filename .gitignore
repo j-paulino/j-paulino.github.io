@@ -1,6 +1,7 @@
 _site
 .sass-cache
 .jekyll-metadata
+.idea
 bower_components
 node_modules
 vendor

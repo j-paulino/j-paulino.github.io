@@ -1,17 +1,42 @@
 ---
 layout: default
 ---
-<div class="jekmdl-crumbs mdl-color-text--grey-500">
-{{ site.title }} &gt; {{ page.title }}
+<h3 class="jp-page-tile">Musings on
+    <div class="jp-pill-box">
+        <span class="jp-pill active">js</span>
+        <span class="jp-pill">es5</span>
+        <span class="jp-pill">es6</span>
+        <span class="jp-pill">html5</span>
+        <span class="jp-pill">css3</span>
+    </div>
+</h3>
+<div class="jp-post-list">
+    {% for post in site.posts %}
+    <div class="jp-post">
+        <div class="jp-post-list--title">
+            <h2>
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <div class="jp-post-meta mdl-color-text--grey-500">
+                {{ site.time | date_to_long_string }}
+                {% if post.author %}
+                    <small class="jp-post-author">by {{ post.author }}</small>
+                {% endif %}
+            </div>
+        </div>
+        {% if post.categories | length %}
+            <div class="jp-post-list--categories">
+                {% for category in post.categories %}
+                    <a href="{{ category | prepend: site.baseurl+'/' }}">#{{category}}</a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    <p>{{post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+    {% endfor %}
 </div>
-<h3>Posts</h3>
-<ul class="jekmdl-post-list">{% for post in site.posts %}
-<li>
-<h2>
-<a class="jekmdl-post-list" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &gt;&gt; {{ site.time | date_to_long_string }}
-</h2>
-</li>
-{% endfor %}
-</ul>
 
-<a href="{{ "/feed.xml" | prepend: site.baseurl }}"><button class="mdl-button mdl-js-button mdl-button--primary">via RSS</button></a>
+<!--
+<a href="{{ '/feed.xml' | prepend: site.baseurl }}">
+    <button class="mdl-button mdl-js-button mdl-button&#45;&#45;primary">via RSS</button>
+</a>-->

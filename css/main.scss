@@ -1,77 +1,208 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 @import "material-design-lite";
 @import "syntax-highlighting";
 
-// jekmdl variables
+$brand-primary: #1F3A93;
+$brand-secondary: #9A12B3;
 html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
 }
-.jekmdl-ribbon {
+
+.jp-ribbon {
+  position: relative;
   width: 100%;
   height: 40vh;
-  background-color: #3F51B5;
+  background: -webkit-linear-gradient(to top right, $brand-primary 5%, $brand-secondary 95%);
+  background: linear-gradient(to top right, $brand-primary 5%, $brand-secondary 95%);
   -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  &:before {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    display: block;
+    animation: background-shift 10s 3;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    z-index: 4;
+    background: -webkit-linear-gradient(to top right, $brand-secondary 5%, $brand-primary 95%);
+    background: linear-gradient(to top right, $brand-secondary 5%, $brand-primary 95%);
+  }
 }
 
-.jekmdl-main {
+@keyframes background-shift {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.jp-main {
   margin-top: -35vh;
   -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
-.jekmdl-header .mdl-layout__header-row {
-  padding-left: 40px;
+.jp-me {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid $brand-primary;
+  background-size: 100%;
+  background-image: url('http://joelpaulino.com/img/me.jpeg');
 }
 
-.jekmdl-container {
+.jp-header {
+  margin: 0 auto;
+  .mdl-layout__header-row {
+    padding-left: 0;
+  }
+}
+
+.jp-container {
   max-width: 1600px;
   width: calc(100% - 16px);
   margin: 0 auto;
 }
 
-.jekmdl-post-content {
-	padding: 10px 10px;
+.jp-post-content {
 }
 
-.jekmdl-content {
+.jp-post-meta {
+  font-size: 14px;
+  @media(min-width: 992px) {
+    display: inline-block;
+  }
+  small {
+    font-size: .85em;
+  }
+}
+
+.jp-post-list {
+  .jp-post-meta {
+    margin-top: 5px;
+    @media(min-width: 992px) {
+      margin-left: 5px;
+    }
+  }
+}
+
+.jp-post-author {
+  font-style: italic;
+  text-transform: capitalize;
+  margin-left: 5px;
+}
+
+.jp-content, .jp-hero {
+  min-height: 400px;
   border-radius: 2px;
-  padding: 80px 56px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  padding: 20px;
+  @media (min-width: 992px) {
+    padding: 40px 56px;
+  }
 }
 
-.jekmdl-layout.is-small-screen .jekmdl-content {
+.jp-hero {
+  min-height: 0;
+  h4 {
+    margin: 0 0 10px;
+  }
+}
+
+.jp-layout.is-small-screen .jp-content {
   padding: 40px 28px;
 }
 
-.jekmdl-content h3 {
-  margin-top: 48px;
+.jp-content h3 {
+  margin-top: 20px;
 }
 
-.jekmdl-footer {
+.jp-footer {
   padding-left: 40px;
 }
 
-.jekmdl-footer .mdl-mini-footer--link-list a {
+.jp-footer .mdl-mini-footer--link-list a {
   font-size: 13px;
 }
-.jekmdl-post-list h2 {
-  font-size: 18px;
-}
-.jekmdl-post-list {
-    margin-left: 0;
-    list-style: none;
 
-    > li {
-        margin-bottom: 10px;
+.jp-post-list h2 {
+  display: inline-block;
+  font-size: 18px;
+  line-height: normal;
+  margin: 0;
+}
+
+.jp-post-list--categories {
+  margin: 5px 0;
+}
+
+.jp-post-list {
+  margin-left: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: 10px;
+  }
+}
+
+.jp-post {
+  clear: both;
+  overflow: hidden;
+  @media(min-width: 992px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.jp-page-tile {
+  @media(min-width: 992px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.jp-pill-box {
+  @media(min-width: 992px) {
+    .jp-page-tile &{
+      margin-left: 15px;
     }
+  }
+}
+
+.jp-pill {
+  height: $badge-size;
+  border-radius: $badge-size;
+  text-transform: uppercase;
+  background: $brand-secondary;
+  padding: 3px 5px;
+  color: #FFF;
+  font-size: 12px;
+  &.active {
+    background: $brand-primary;
+  }
+  a {
+    color: #FFF;
+  }
 }
 
 /**
@@ -79,23 +210,26 @@ html, body {
  */
 pre,
 code {
-    font-size: 13px;
-    border: 1px solid grey;
-    border-radius: 3px;
-    background-color: #eef;
+  font-size: 13px;
+  border-radius: 3px;
+  padding: 2px;
+  background: #303030;
+  color: #d0d0d0;
+
 }
 
 code {
-    padding: 1px 5px;
+  padding: 2px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
+  padding: 8px 12px;
+  overflow-x: scroll;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
+

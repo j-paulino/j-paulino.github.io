@@ -34,7 +34,7 @@ html {
 */
 body {
   width: 100%;
-  min-height: 100%;
+  height: auto;
   margin: 0;
 }
 
@@ -53,3 +53,26 @@ main {
 *[hidden] {
   display: none !important;
 }
+
+a{
+  text-decoration: none;
+}
+
+/**
+ * Icons
+ */
+.icon {
+
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+
+    path {
+      fill: #FFF;
+    }
+  }
+}
+
+
