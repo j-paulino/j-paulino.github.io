@@ -10,14 +10,14 @@ layout: default
 </h3>
 <div class="jp-post-list">
     {% for post in site.posts %}
-    <div class="jp-post">
+    <div class="jp-post jp-post-excerpt">
         <div class="jp-post-header">
             <div class="jp-post-list--title">
                 <h2>
                     <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </h2>
                 <div class="jp-post-meta mdl-color-text--grey-500">
-                    {{ site.time | date_to_long_string }}
+                    {{ post.date | date: "%B %-d, %Y" }}
                     {% if post.author %}
                     <small class="jp-post-author">by {{ post.author }}</small>
                     {% endif %}
@@ -31,7 +31,8 @@ layout: default
                 </div>
             {% endif %}
         </div>
-        <p style="flex-flow: column wrap;">{{post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+        <p>{{post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+        <a href="{{ post.url }}">Read more...</a>
     </div>
     {% endfor %}
 </div>

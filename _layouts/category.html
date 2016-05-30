@@ -17,7 +17,7 @@ layout: default
                     <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </h2>
                 <div class="jp-post-meta mdl-color-text--grey-500">
-                    {{ site.time | date_to_long_string }}
+                    {{ post.date | date: "%B %-d, %Y" }}
                     {% if post.author %}
                     <small class="jp-post-author">by {{ post.author }}</small>
                     {% endif %}

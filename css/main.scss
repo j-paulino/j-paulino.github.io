@@ -94,13 +94,26 @@ html, body {
   }
 }
 
+.jp-site-title {
+  display: flex;
+  align-items: center;
+}
 .jp-container {
   max-width: 1600px;
   width: calc(100% - 16px);
   margin: 0 auto;
 }
 
+.jp-post-excerpt {
+  p {
+    margin-bottom: 0;
+  }
+}
+
 .jp-post-content {
+  .jp-post-meta {
+    margin-bottom: 5px;
+  }
 }
 
 .jp-post-meta {
@@ -133,7 +146,7 @@ html, body {
   margin-bottom: 40px !important;
   padding: 20px;
   @media (min-width: 992px) {
-    padding: 40px 56px;
+    padding: 20px 40px;
   }
 }
 
@@ -281,7 +294,11 @@ a {
 }
 
 .mdl-layout-title {
-  font-size: 1.5em;
+  font-size: 2em;
+  .jp-slogan{
+    font-size: .85em;
+    font-style: italic;
+  }
 }
 
 /**
@@ -310,5 +327,12 @@ pre {
     padding-right: 0;
     padding-left: 0;
   }
+  &.output {
+    margin-top: -22px;
+    padding-top: 0;
+  }
 }
 
+#disqus_thread {
+  margin-top: 20px;
+}

@@ -39,39 +39,47 @@
 
     font-size: 0.6em;
   }
-
+  $type-margin: 20px;
   h1 {
-    @include typo-display-3;
-
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @include typo-display-2;
+    margin-top: $type-margin;
+    margin-bottom: $type-margin;
+    @media (min-width: 992px) {
+      @include typo-display-3;
+    }
   }
 
   h2 {
-    @include typo-display-2;
-
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @include typo-display-1;
+    margin-top: $type-margin;
+    margin-bottom: $type-margin;
+    @media (min-width: 992px) {
+      @include typo-display-2;
+    }
   }
 
   h3 {
-    @include typo-display-1;
-
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @include typo-headline;
+    margin-top: $type-margin;
+    margin-bottom: $type-margin;
+    @media (min-width: 992px) {
+      @include typo-display-1;
+    }
   }
 
   h4 {
-    @include typo-headline;
-
-    margin-top: 24px;
+    @include typo-title;
+    margin-top: 16px;
     margin-bottom: 16px;
+    @media (min-width: 992px) {
+      @include typo-headline;
+    }
   }
 
   h5 {
     @include typo-title;
 
-    margin-top: 24px;
+    margin-top: 16px;
     margin-bottom: 16px;
   }
 

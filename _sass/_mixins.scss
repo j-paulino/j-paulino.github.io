@@ -26,7 +26,7 @@
   @include typo-preferred-font($usePreferred);
   font-size: 112px;
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.58;
   letter-spacing: -0.04em;
 
   @if $colorContrast {
@@ -36,9 +36,9 @@
 
 @mixin typo-display-3($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 1.35;
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.58;
   letter-spacing: -0.02em;
 
   @if $colorContrast {
@@ -48,9 +48,9 @@
 
 @mixin typo-display-2($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 45px;
-  font-weight: 400;
-  line-height: 48px;
+  font-size: 2.25em;
+  font-weight: 500;
+  line-height: 1;
 
   @if $colorContrast {
     opacity: 0.54;
@@ -59,9 +59,9 @@
 
 @mixin typo-display-1($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 40px;
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1;
 
   @if $colorContrast {
     opacity: 0.54;
@@ -70,9 +70,9 @@
 
 @mixin typo-headline($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 24px;
+  font-size: 1.75em;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 1;
   -moz-osx-font-smoothing: grayscale;
 
   @if $colorContrast {
@@ -82,7 +82,7 @@
 
 @mixin typo-title($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 20px;
+  font-size: 1.5em;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -94,9 +94,9 @@
 
 @mixin typo-subhead($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 16px;
+  font-size: 1.25em;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1;
   letter-spacing: 0.04em;
 
   @if $colorContrast {
@@ -106,9 +106,9 @@
 
 @mixin typo-subhead-2($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 16px;
+  font-size: 1.25em;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 1;
   letter-spacing: 0.04em;
 
   @if $colorContrast {
@@ -136,7 +136,7 @@
   @include typo-preferred-font($usePreferred);
   font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.58;
   letter-spacing: 0;
 
   @if $colorContrast {
@@ -162,7 +162,7 @@
   font-size: 24px;
   font-weight: 300;
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1;
   letter-spacing: 0.08em;
 
   &:before {
