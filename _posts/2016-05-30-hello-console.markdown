@@ -4,7 +4,7 @@ title:  "Hello console!"
 date:   2016-05-30 00:00:00 -0700
 author: joel paulino
 comments: true
-categories: js html5
+categories: js
 ---
 Although the console object should be in every Front End Developer's toolbelt, it's actually a non-standard
 feature.<!--more--> But in most browsers the API is the same, so let's checkout some of my favorite methods.
