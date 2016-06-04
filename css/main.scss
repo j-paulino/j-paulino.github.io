@@ -14,15 +14,24 @@ html, body {
   padding: 0;
 }
 
-.jp-ribbon {
+header {
   position: relative;
+  z-index: 5;
+}
+
+.jp-ribbon {
+  position: fixed;
   width: 100%;
   height: 40vh;
+  margin-top: -64px;
   background: -webkit-linear-gradient(to top right, $brand-primary 5%, $brand-secondary 95%);
   background: linear-gradient(to top right, $brand-primary 5%, $brand-secondary 95%);
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  @media(min-height:800px ){
+    height: calc(35vh + 64px);
+  }
   &:before {
     opacity: 0;
     position: absolute;
@@ -57,7 +66,8 @@ html, body {
 }
 
 .jp-main {
-  margin-top: -35vh;
+  //margin-top: -35vh;
+  margin-top: 50px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -92,12 +102,16 @@ html, body {
   .mdl-layout__header-row {
     padding-left: 0;
   }
+  &.jp-container {
+    width: 100%;
+  }
 }
 
 .jp-site-title {
   display: flex;
   align-items: center;
 }
+
 .jp-container {
   max-width: 1600px;
   width: calc(100% - 16px);

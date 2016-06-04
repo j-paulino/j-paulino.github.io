@@ -7,7 +7,7 @@ comments: true
 categories: js
 ---
 Although the console object should be in every Front End Developer's toolbelt, it's actually a non-standard
-feature.<!--more--> But in most browsers the API is the same, so let's checkout some of my favorite methods.
+feature. But in most browsers the API is the same, so let's checkout some of my favorite methods.
 
 #### Console.log
 I am sure this snippet looks very familiar.
@@ -15,6 +15,7 @@ I am sure this snippet looks very familiar.
 // Ex 1
 console.log("Hello console!");
 {% endhighlight %}
+<!--more-->
 
 How about this?
 {% highlight javascript %}
@@ -120,7 +121,7 @@ it's nice to have some control over how your messages and errors get displayed.
 ### Console.table
 
 The `table` method is a fun one. It lets you display tabular data in a...table. The example below was lifted from the console
-output of the [Performance-Analyser](https://chrome.google.com/webstore/detail/performance-analyser/djgfmlohefpomchfabngccpbaflcahjf?hl=en)
+output of the [Performance-Analyser](https://chrome.google.com/webstore/detail/performance-analyser/djgfmlohefpomchfabngccpbaflcahjf?hl=en target="_blank")
 chrome extension (highly recommend you check it out).
 
 {% highlight javascript %}
