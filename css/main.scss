@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Only the main Sass file needs front matter  (the dashes are enough)
 ---
 
 @charset "utf-8";
@@ -19,6 +19,12 @@ header {
   z-index: 5;
 }
 
+.jp-action-panel {
+  position: fixed !important;
+  height: 40vh;
+  margin-top: -104px !important;
+}
+
 .jp-ribbon {
   position: fixed;
   width: 100%;
@@ -29,7 +35,7 @@ header {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  @media(min-height:800px ){
+  @media(min-height: 800px) {
     height: calc(35vh + 64px);
   }
   &:before {
@@ -49,7 +55,7 @@ header {
     background: -webkit-linear-gradient(to top right, $brand-secondary 5%, $brand-primary 95%);
     background: linear-gradient(to top right, $brand-secondary 5%, $brand-primary 95%);
   }
-  .mdl-cell, .mdl-grid{
+  .mdl-cell, .mdl-grid {
     padding: 0;
     margin: 0;
 
@@ -67,7 +73,7 @@ header {
 
 .jp-main {
   //margin-top: -35vh;
-  margin-top: 50px;
+  margin-top: 40px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -78,11 +84,11 @@ header {
   h4 {
     margin: 0 0 10px;
   }
-  .jp-pill{
+  .jp-pill {
     margin-right: 5px;
     margin-bottom: 5px;
     background: unquote("rgb(#{$palette-blue-grey-200})");
-    &:hover{
+    &:hover {
       background: unquote("rgb(#{$palette-blue-grey-300})");
     }
   }
@@ -224,7 +230,7 @@ header {
 }
 
 .jp-pill-box {
-  .jp-page-tile &{
+  .jp-page-tile & {
     margin-top: 10px;
     @media(min-width: 992px) {
       margin-left: 15px;
@@ -246,14 +252,14 @@ header {
   color: #FFF;
   font-size: 12px;
   transition: background .2s ease-in-out;
-  .fa{
+  .fa {
     font-size: 14px;
   }
   white-space: nowrap;
   &.active {
     background: $brand-primary;
   }
-  &:hover{
+  &:hover {
     background: lighten($brand-primary, 10%);
   }
   a {
@@ -309,7 +315,7 @@ a {
 
 .mdl-layout-title {
   font-size: 2em;
-  .jp-slogan{
+  .jp-slogan {
     font-size: .85em;
     font-style: italic;
   }

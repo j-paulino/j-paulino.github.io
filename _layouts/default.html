@@ -11,17 +11,17 @@
     <div class="jp-ribbon mdl-grid mdl-grid--no-spacing">
         <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
         <div class="mdl-cell mdl-cell--8-col"></div>
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
-            <button class="mdl-button mdl-button--fab mdl-button--floating-action">
-                <a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank"><i class="fa fa-rss"></i></a>
-            </button>
-        </div>
     </div>
     <main class="jp-main mdl-layout__content site-content">
         <div class="jp-container mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
             <div class="jp-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
                 {{ content }}
+            </div>
+            <div class="jp-action-panel mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+                <button class="mdl-button mdl-button--fab mdl-button--floating-action">
+                    <a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank"><i class="fa fa-rss"></i></a>
+                </button>
             </div>
         </div>
         <div class="jp-container mdl-grid mdl-grid--no-spacing">
