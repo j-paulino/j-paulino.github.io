@@ -22,6 +22,10 @@ header {
 .jp-action-panel {
   position: fixed !important;
   height: 40vh;
+  //TODO: DRY
+  @media(min-height: 800px) {
+    height: calc(35vh + 64px);
+  }
   margin-top: -104px !important;
 }
 
@@ -33,7 +37,6 @@ header {
   background: -webkit-linear-gradient(to top right, $brand-primary 5%, $brand-secondary 95%);
   background: linear-gradient(to top right, $brand-primary 5%, $brand-secondary 95%);
   -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   @media(min-height: 800px) {
     height: calc(35vh + 64px);
