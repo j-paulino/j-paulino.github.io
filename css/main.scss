@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter  (the dashes are enough)
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
 @charset "utf-8";
@@ -9,9 +9,11 @@
 $brand-primary: #1F3A93;
 $brand-secondary: #9A12B3;
 html, body {
-  font-family: 'Helvetica', sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
+  color: #666;
+  font-weight: 300;
 }
 
 header {
@@ -141,9 +143,6 @@ header {
 
 .jp-post-meta {
   font-size: 14px;
-  @media(min-width: 992px) {
-    display: inline-block;
-  }
   small {
     font-size: .85em;
   }
@@ -152,9 +151,6 @@ header {
 .jp-post-list {
   .jp-post-meta {
     margin-top: 5px;
-    @media(min-width: 992px) {
-      margin-left: 5px;
-    }
   }
 }
 
@@ -211,8 +207,10 @@ header {
   }
 }
 
-.jp-post {
-  margin-bottom: 30px;
+.jp-post:not(:last-of-type) {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
 }
 
 .jp-post-header {
@@ -339,9 +337,15 @@ code {
 
 code {
   padding: 2px 5px;
+  table {
+    pre {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
-pre {
+figure > pre {
   padding: 8px 12px;
   overflow-x: scroll;
 
@@ -356,6 +360,51 @@ pre {
   }
 }
 
+td.code {
+  padding: 0;
+  margin: 0;
+}
+
+.code pre {
+  margin: 0;
+}
+
 #disqus_thread {
   margin-top: 20px;
+}
+
+code {
+  .gutter {
+    padding-right: 12px;
+  }
+}
+
+blockquote {
+  position: relative;
+  margin: 0;
+  padding: 30px 80px;
+  &  li{
+    font-size: 20px;
+  }
+}
+
+blockquote:before, blockquote:after {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 120px;
+  line-height: 1;
+  color: #AAA;
+}
+
+blockquote:before {
+  top: 0;
+  left: 0;
+  content: "\201C";
+}
+
+blockquote:after {
+  top: 0;
+  right: 0;
+  content: "\201D";
 }

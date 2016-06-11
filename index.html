@@ -9,7 +9,7 @@ layout: default
     </div>
 </h3>
 <div class="jp-post-list">
-    {% for post in site.posts %}
+    {% for post in site.posts reversed %}
         {% include post_excerpt.html %}
     {% endfor %}
 </div>
