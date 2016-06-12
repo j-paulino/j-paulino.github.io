@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-<h3 class="jp-page-tile">Musings on...
+<h1 class="jp-page-tile">Musings on...
     <div class="jp-pill-box">
         {% for cat in site.categories %}
             <span class="jp-pill" ><a href="/categories/{{cat[0]}}/">{{cat[0]}}</a></span>
         {% endfor %}
     </div>
-</h3>
+</h1>
 <div class="jp-post-list">
-    {% for post in site.posts reversed %}
+    {% for post in site.posts %}
         {% include post_excerpt.html %}
     {% endfor %}
 </div>

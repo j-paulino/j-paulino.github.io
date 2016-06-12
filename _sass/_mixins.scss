@@ -36,7 +36,7 @@
 
 @mixin typo-display-3($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 2.5em;
+  font-size: relative-fonts(38/18);
   font-weight: 500;
   line-height: 1.58;
   letter-spacing: -0.02em;
@@ -48,7 +48,7 @@
 
 @mixin typo-display-2($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 2.25em;
+  font-size: relative-fonts(34/18);
   font-weight: 500;
   line-height: 1;
 
@@ -59,7 +59,7 @@
 
 @mixin typo-display-1($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 2em;
+  font-size: relative-fonts(26/18);
   font-weight: 500;
   line-height: 1;
 
@@ -70,7 +70,7 @@
 
 @mixin typo-headline($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 1.75em;
+  font-size: relative-fonts(22/18);
   font-weight: 400;
   line-height: 1;
   -moz-osx-font-smoothing: grayscale;
@@ -82,7 +82,7 @@
 
 @mixin typo-title($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 1.5em;
+  font-size: relative-fonts(20/18);
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.02em;
@@ -94,7 +94,7 @@
 
 @mixin typo-subhead($colorContrast: false, $usePreferred: true) {
   @include typo-preferred-font($usePreferred);
-  font-size: 1.25em;
+  font-size: relative-fonts(20/18);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.04em;
@@ -118,7 +118,7 @@
 
 @mixin typo-body-2($colorContrast: false, $usePreferred: false) {
   @include typo-preferred-font($usePreferred);
-  font-size: 14px;
+  font-size: relative-fonts(14/18);
   @if $usePreferred {
     font-weight: 500;
   } @else {
@@ -134,8 +134,8 @@
 
 @mixin typo-body-1($colorContrast: false, $usePreferred: false) {
   @include typo-preferred-font($usePreferred);
-  font-size: 16px;
-  font-weight: 300;
+  font-size: relative-fonts(16/18);
+  font-weight: 500;
   line-height: 1.8;
   letter-spacing: 0;
 
@@ -146,7 +146,7 @@
 
 @mixin typo-caption($colorContrast: false, $usePreferred: false) {
   @include typo-preferred-font($usePreferred);
-  font-size: 12px;
+  font-size: relative-fonts(12/18);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0;

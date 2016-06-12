@@ -7,10 +7,7 @@ comments: true
 categories: js
 ---
 Although the console object should be in every Front End Developer's toolbelt, it's actually a non-standard
-feature. But in most browsers the API is the same, so let's checkout some of my favorite methods.
-
-#### Console.log
-I am sure this snippet looks very familiar.
+feature. But in most browsers the API is the same, so let's checkout some of my favorite methods. I am sure this snippet looks very familiar.
 {% highlight javascript %}
 // Ex 1
 console.log("Hello console!");
@@ -23,7 +20,7 @@ How about this?
 console.log("Hello", "console", "!");
 {% endhighlight %}
 
-The console.log method takes any number of arguments and essentially prints to the console the string representations of each
+The `log` method takes any number of arguments and essentially prints to the console the string representations of each
 of argument appended together in ordered list separated by a space.
 
 {% highlight javascript %}
@@ -57,7 +54,7 @@ The log method also has another API.
 
 Here we pass <code>console.log</code> a message and substrings which will replace substitution strings in the main string.
 
-#### Console.dir
+## Console.dir
 The `dir` is the cousin of the `log` method. To see the usefulness of dir, type the following into your console:
 
 {% highlight javascript %}
@@ -101,7 +98,7 @@ It outputs the DOM Tree in html format. Now try the following:
 
 Now you can see the document object's properties and methods.
 
-#### Console.info, warn and error
+## Console.info, warn and error
 
 These methods work exactly like `log` except that output UI and formatting is slightly different.
 
@@ -118,10 +115,10 @@ As you can see, color and iconography are used to classify the outputs. If your 
 it's nice to have some control over how your messages and errors get displayed.
 
 
-### Console.table
+## Console.table
 
 The `table` method is a fun one. It lets you display tabular data in a...table. The example below was lifted from the console
-output of the [Performance-Analyser](https://chrome.google.com/webstore/detail/performance-analyser/djgfmlohefpomchfabngccpbaflcahjf?hl=en target="_blank")
+output of the [Performance-Analyser](https://chrome.google.com/webstore/detail/performance-analyser/djgfmlohefpomchfabngccpbaflcahjf?hl=en){:target="_blank"}
 chrome extension (highly recommend you check it out).
 
 {% highlight javascript %}
@@ -131,7 +128,7 @@ console.table(table.data, table.columns);
 
 ![alt text][ex-8-out]
 
-I covered some goodies, but for a more comprehensive tutorial visit [MDN](https://developer.mozilla.org/en-US/docs/Web/API/console target="_blank").
+I covered some goodies, but for a more comprehensive tutorial visit [MDN](https://developer.mozilla.org/en-US/docs/Web/API/console){:target="_blank"}.
 I will probably also have some follow ups to this post.
 
 

@@ -14,6 +14,10 @@ html, body {
   padding: 0;
   color: #666;
   font-weight: 300;
+  font-size: 16px;
+  @media (min-width: 480px) {
+    font-size: 18px;
+  }
 }
 
 header {
@@ -113,8 +117,10 @@ header {
   .mdl-layout__header-row {
     padding-left: 0;
   }
-  &.jp-container {
-    width: 100%;
+  @media (min-width: 840px) {
+    &.jp-container {
+      width: 100%;
+    }
   }
 }
 
@@ -186,9 +192,8 @@ header {
   font-size: 13px;
 }
 
-.jp-post-list h2 {
+.jp-post-list--title h2 {
   display: inline-block;
-  font-size: 18px;
   line-height: normal;
   margin: 0;
 }
@@ -208,9 +213,9 @@ header {
 }
 
 .jp-post:not(:last-of-type) {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .jp-post-header {
@@ -317,7 +322,7 @@ a {
 .mdl-layout-title {
   font-size: 2em;
   .jp-slogan {
-    font-size: .85em;
+    font-size: .8em;
     font-style: italic;
   }
 }
@@ -380,31 +385,13 @@ code {
 }
 
 blockquote {
-  position: relative;
-  margin: 0;
-  padding: 30px 80px;
-  &  li{
-    font-size: 20px;
-  }
+  background: #EDEDED;
+  border-top: 2px #ccc solid;
+  border-bottom: 2px #ccc solid;
+  padding: 0 1.2rem;
+  margin: 1.2rem 0;
 }
 
-blockquote:before, blockquote:after {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  font-size: 120px;
-  line-height: 1;
-  color: #AAA;
-}
-
-blockquote:before {
-  top: 0;
-  left: 0;
-  content: "\201C";
-}
-
-blockquote:after {
-  top: 0;
-  right: 0;
-  content: "\201D";
+ol {
+  margin-left: 0;
 }
