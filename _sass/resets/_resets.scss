@@ -78,3 +78,26 @@ a{
 img {
   max-width: 100%;
 }
+
+code {
+  .gutter {
+    padding-right: 12px;
+  }
+}
+
+blockquote {
+  background: #EDEDED;
+  border-top: 2px #ccc solid;
+  border-bottom: 2px #ccc solid;
+  padding: 0 1.2rem;
+  margin: 1.2rem 0;
+}
+
+ol {
+  margin-left: 0;
+}
+
+iframe {
+  margin-bottom: 15px;
+}
+
