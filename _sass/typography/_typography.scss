@@ -48,26 +48,26 @@
 
   h2 {
     @include typo-display-1;
-    margin-top: $type-margin;
-    margin-bottom: $type-margin;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   h3 {
     @include typo-headline;
-    margin-top: $type-margin;
-    margin-bottom: $type-margin;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   h4 {
     @include typo-title;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   h5 {
     @include typo-title;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   h6 {
@@ -78,8 +78,6 @@
 
   p {
     @include typo-body-1;
-
-    margin-bottom: 16px;
   }
 
   a {

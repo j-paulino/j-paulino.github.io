@@ -134,11 +134,10 @@
 
 @mixin typo-body-1($colorContrast: false, $usePreferred: false) {
   @include typo-preferred-font($usePreferred);
-  font-size: relative-fonts(16/18);
-  font-weight: 500;
+  font-size: 1em;
   line-height: 1.8;
   letter-spacing: 0;
-
+  margin-bottom: 1.25em;
   @if $colorContrast {
     opacity: 0.87;
   }
