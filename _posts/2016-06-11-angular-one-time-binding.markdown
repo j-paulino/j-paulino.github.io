@@ -226,4 +226,4 @@ in the arrays are equivalent. For objects it checks that properties match and ar
 
 
 It was fun diving into the inner workings of Angular. I must admit, I need to do some further expirimentation and research on this topic. I will update this
-entry accordingly based on my finding. But my next "Under the hood" will probably deal with Angular's AST implementation
+entry accordingly based on my finding. But my next "Under the hood" will probably deal with Angular's AST implementation.
