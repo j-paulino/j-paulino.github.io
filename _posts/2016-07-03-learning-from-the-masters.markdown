@@ -61,7 +61,7 @@ Kyle Simpson, <small>Open Web Evangelist</small> - [You Don't Know JS](https://g
 
 Jake Archibald, <small>Developer Advocate Google Chrome</small> - [blog](https://jakearchibald.com/){:target="_blank"}, [HTTP 203](https://developers.google.com/web/shows/http203/?hl=en) (podcast with Paul below)
 
-Paul Lewis, <small>Developer Advocate Google Chrome</small> - [blog](https://aerotwist.com/), [Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860){:target="_blank"}
+Paul Lewis, <small>Developer Advocate Google Chrome</small> - [blog](https://aerotwist.com/){:target="_blank"}, [Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860){:target="_blank"}
 (Udacity Course)
 
 Marcy Sutton, <small>Senior Front-End Engineer Deque Systems Inc</small>, [blog](https://marcysutton.com/){:target="_blank"}
