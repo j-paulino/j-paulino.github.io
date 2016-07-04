@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Under the hood: Angular 1 one-time binding "
+title:  "Under the hood: Angular 1 one-time binding"
 date:   2016-06-13 00:00:00 -0700
 author: joel paulino
 comments: true
