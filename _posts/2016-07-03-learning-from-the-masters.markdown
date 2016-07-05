@@ -26,7 +26,7 @@ from 2008 alone shows how influential Mr. Irish has been. Read his [blog](http:/
 The man behind [CSS-TRICKS](https://css-tricks.com/){:target="_blank"} (the number one resource for all things CSS) and the Co-Founder of CodePen
 (checkout his [Pen](https://codepen.io/chriscoyier/){:target="_blank"}). In your down time search out
 tutorials by Mr Coyier, he is a great teacher. Also checkout his podcast [Shop Talk](http://shoptalkshow.com/){:target="_blank"},
-which is great resource for all this web design and development. Chris's [site](http://chriscoyier.net/){:target="_blank"}.
+which is great resource for all things web design and development. Chris's [site](http://chriscoyier.net/){:target="_blank"}.
 
 ## Addy Osmani
 Another Googler and Yeoman contributor. Osmani's [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/index.html){:target="_blank"}
@@ -35,7 +35,7 @@ Read this book and you will be one step closer to JS mastery. Follow Addy's esca
 especially his [blog](https://addyosmani.com/blog/).
 
 ## Nicholas C. Zakas
-Mr. Zakas has been world class for a long time (at least 10 years). He did pioneering work while working at Yahoo and box. He has also written several books about JS. I've peronally read and recommend:
+Mr. Zakas has been world class for a long time (at least 10 years). He did pioneering work while working at Yahoo and box. He has also written several books about JS. I've personally read and recommend:
 Maintainable JavaScript, Professional JavaScript (3rd Edition) and High Performance JavaScript. His [blog](https://www.nczonline.net/){:target="_blank"} shows that he is always working on his craft and is always at the forefront. I
 am looking forward to reading [Understanding ECMAScript 6](https://leanpub.com/understandinges6){:target="_blank"}.
 
