@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
+<h1>{{ page.title }}</h1>
 <div class="jp-post-content">
     <div class="jp-post-meta mdl-color-text--grey-500">
-        {{ site.time | date_to_long_string }} {% if page.author %}
-        <small class="jp-post-author">by {{ page.author }}</small>
+        {{ page.date | date: "%B %-d, %Y" }}
+        {% if page.author %}
+            <small class="jp-post-author">by {{ page.author }}</small>
         {% endif %}
     </div>
     {{ content }}

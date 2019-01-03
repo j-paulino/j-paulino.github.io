@@ -5,6 +5,9 @@
   margin: 0;
   background: #303030;
   color: #d0d0d0;
+  .jp-post-content & {
+    margin: 1.25em 0;
+  }
   .c {
     color: #999999;
     font-style: italic;

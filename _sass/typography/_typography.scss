@@ -39,53 +39,45 @@
 
     font-size: 0.6em;
   }
-
+  $type-margin: 20px;
   h1 {
-    @include typo-display-3;
-
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @include typo-display-2;
+    margin-top: $type-margin;
+    margin-bottom: $type-margin;
   }
 
   h2 {
-    @include typo-display-2;
-
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @include typo-display-1;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   h3 {
-    @include typo-display-1;
-
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @include typo-headline;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   h4 {
-    @include typo-headline;
-
-    margin-top: 24px;
-    margin-bottom: 16px;
+    @include typo-title;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   h5 {
     @include typo-title;
-
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   h6 {
     @include typo-subhead;
-
     margin-top: 24px;
     margin-bottom: 16px;
   }
 
   p {
     @include typo-body-1;
-
-    margin-bottom: 16px;
   }
 
   a {
@@ -93,9 +85,6 @@
     font-weight: 500;
   }
 
-  blockquote {
-    @include typo-blockquote;
-  }
 
   mark {
     background-color: #f4ff81;

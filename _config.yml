@@ -23,9 +23,8 @@ comments: true
 markdown:    kramdown
 
 # Outputting
-relative_permalinks: false
-permalink:     /articles/:title.html
-timezone:      America/Los_Angeles
+permalink: /articles/:year/:month/:day/:title/
+timezone:  America/Los_Angeles
 
 # Markdown Processors
 kramdown:
@@ -42,3 +41,4 @@ exclude:
   - vendor
 
 excerpt_separator: <!--more-->
+

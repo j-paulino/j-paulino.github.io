@@ -3,20 +3,28 @@
 
 {% include head.html %}
 
-<body class="Site mdl-color--grey-200">
+<body class="site mdl-color--grey-200">
 <div class="mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-200">
 
     {% include header.html %}
 
-    <div class="jp-ribbon"></div>
-    <main class="jp-main mdl-layout__content Site-content">
-        <div class="jp-container mdl-grid">
+    <div class="jp-ribbon mdl-grid mdl-grid--no-spacing">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+        <div class="mdl-cell mdl-cell--8-col"></div>
+    </div>
+    <main class="jp-main mdl-layout__content site-content">
+        <div class="jp-container mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
             <div class="jp-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
                 {{ content }}
             </div>
+            <div class="jp-action-panel mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+                <button class="mdl-button mdl-button--fab mdl-button--floating-action">
+                    <a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank"><i class="fa fa-rss"></i></a>
+                </button>
+            </div>
         </div>
-        <div class="jp-container mdl-grid">
+        <div class="jp-container mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
             <div class="jp-hero mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
                 <div class="flag flag--responsive">
@@ -26,9 +34,9 @@
                         </a>
                     </div>
                     <div class="flag__body">
-                        <h4>Yo!</h4>
                         <p>
-                            My name is Joel. I work as a Front End Developer, and when I grow up I want to be JS ninja.
+                            My name is Joel. I have a passion for Front End Development, and when I grow up I want to be a JS
+                            ninja. I am currently the Lead Developer at <a href="http://www.yoicorp.com/" target="_blank">Yoi</a>.
                         </p>
                         <div class="jp-pill-box">
                             {% if site.twitter_username %}
@@ -41,6 +49,14 @@
                                     {% include icon-github.html username=site.github_username %}
                                 </span>
                             {% endif %}
+                            <span class="jp-pill">
+                                <a href="mailto:{{site.email}}"><i class="fa fa-envelope"></i>
+                                    <span class="hidden">{{site.email}}</span></a>
+                            </span>
+                            <span class="jp-pill">
+                                <a href="{{ '/feed.xml' | prepend: site.baseurl }}"><i class="fa fa-rss"></i>
+                                    <span class="hidden">Subscribe</span></a>
+                            </span>
                         </div>
                     </div>
 
@@ -51,5 +67,23 @@
     </main>
 </div>
 {% include footer.html %}
+<script>
+    if ("{{site.url}}".indexOf(window.location.host) > -1) {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-78484689-1', 'auto');
+        ga('send', 'pageview');
+    }
+</script>
 </body>
 </html>

@@ -9,20 +9,49 @@
 $brand-primary: #1F3A93;
 $brand-secondary: #9A12B3;
 html, body {
-  font-family: 'Helvetica', sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
+  color: #666;
+  font-weight: 300;
+  font-size: 16px;
+  @media (min-width: 480px) {
+    font-size: 18px;
+  }
+}
+
+header {
+  position: relative;
+  z-index: 5;
+}
+
+.jp-action-panel {
+  top: 0;
+  right: 0;
+  position: fixed !important;
+  height: 40vh;
+  //TODO: DRY
+  @media(min-height: 800px) {
+    height: -webkit-calc(35vh + 64px);
+    height: calc(35vh + 64px);
+  }
+  //margin-top: 100px !important;
 }
 
 .jp-ribbon {
-  position: relative;
+  top: 0;
+  position: fixed;
   width: 100%;
   height: 40vh;
+  //margin-top: -64px;
   background: -webkit-linear-gradient(to top right, $brand-primary 5%, $brand-secondary 95%);
   background: linear-gradient(to top right, $brand-primary 5%, $brand-secondary 95%);
   -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
+  @media(min-height: 800px) {
+    height: -webkit-calc(35vh + 64px);
+    height: calc(35vh + 64px);
+  }
   &:before {
     opacity: 0;
     position: absolute;
@@ -40,6 +69,11 @@ html, body {
     background: -webkit-linear-gradient(to top right, $brand-secondary 5%, $brand-primary 95%);
     background: linear-gradient(to top right, $brand-secondary 5%, $brand-primary 95%);
   }
+  .mdl-cell, .mdl-grid {
+    padding: 0;
+    margin: 0;
+
+  }
 }
 
 @keyframes background-shift {
@@ -52,10 +86,26 @@ html, body {
 }
 
 .jp-main {
-  margin-top: -35vh;
+  //margin-top: -35vh;
+  margin-top: 40px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+.jp-hero {
+  min-height: 0;
+  h4 {
+    margin: 0 0 10px;
+  }
+  .jp-pill {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background: unquote("rgb(#{$palette-blue-grey-200})");
+    &:hover {
+      background: unquote("rgb(#{$palette-blue-grey-300})");
+    }
+  }
 }
 
 .jp-me {
@@ -63,9 +113,8 @@ html, body {
   height: 100px;
   margin: 0 auto;
   border-radius: 50%;
-  border: 5px solid $brand-primary;
   background-size: 100%;
-  background-image: url('http://joelpaulino.com/img/me.jpeg');
+  background-image: url('/img/jpaulino.png');
 }
 
 .jp-header {
@@ -73,6 +122,16 @@ html, body {
   .mdl-layout__header-row {
     padding-left: 0;
   }
+  @media (min-width: 840px) {
+    &.jp-container {
+      width: 100%;
+    }
+  }
+}
+
+.jp-site-title {
+  display: flex;
+  align-items: center;
 }
 
 .jp-container {
@@ -81,14 +140,20 @@ html, body {
   margin: 0 auto;
 }
 
+.jp-post-excerpt {
+  p {
+    margin-bottom: 0;
+  }
+}
+
 .jp-post-content {
+  .jp-post-meta {
+    margin-bottom: 5px;
+  }
 }
 
 .jp-post-meta {
   font-size: 14px;
-  @media(min-width: 992px) {
-    display: inline-block;
-  }
   small {
     font-size: .85em;
   }
@@ -97,9 +162,6 @@ html, body {
 .jp-post-list {
   .jp-post-meta {
     margin-top: 5px;
-    @media(min-width: 992px) {
-      margin-left: 5px;
-    }
   }
 }
 
@@ -110,19 +172,11 @@ html, body {
 }
 
 .jp-content, .jp-hero {
-  min-height: 400px;
   border-radius: 2px;
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
   padding: 20px;
   @media (min-width: 992px) {
-    padding: 40px 56px;
-  }
-}
-
-.jp-hero {
-  min-height: 0;
-  h4 {
-    margin: 0 0 10px;
+    padding: 20px 40px;
   }
 }
 
@@ -132,6 +186,7 @@ html, body {
 
 .jp-content h3 {
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .jp-footer {
@@ -142,9 +197,8 @@ html, body {
   font-size: 13px;
 }
 
-.jp-post-list h2 {
+.jp-post-list--title h2 {
   display: inline-block;
-  font-size: 18px;
   line-height: normal;
   margin: 0;
 }
@@ -163,9 +217,13 @@ html, body {
   }
 }
 
-.jp-post {
-  clear: both;
-  overflow: hidden;
+.jp-post:not(:last-of-type) {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.jp-post-header {
   @media(min-width: 992px) {
     display: flex;
     align-items: center;
@@ -174,34 +232,103 @@ html, body {
 }
 
 .jp-page-tile {
+  line-height: 20px;
   @media(min-width: 992px) {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 }
 
 .jp-pill-box {
-  @media(min-width: 992px) {
-    .jp-page-tile &{
+  .jp-page-tile & {
+    margin-top: 10px;
+    @media(min-width: 992px) {
       margin-left: 15px;
+      margin-top: 0;
     }
   }
 }
 
 .jp-pill {
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
   height: $badge-size;
+  line-height: normal;
   border-radius: $badge-size;
   text-transform: uppercase;
   background: $brand-secondary;
-  padding: 3px 5px;
+  padding: 2px 8px;
   color: #FFF;
   font-size: 12px;
+  transition: background .2s ease-in-out;
+  .fa {
+    font-size: 14px;
+  }
+  white-space: nowrap;
   &.active {
     background: $brand-primary;
   }
+  &:hover {
+    background: lighten($brand-primary, 10%);
+  }
   a {
     color: #FFF;
+  }
+}
+
+.mdl-cell {
+  position: relative;
+}
+
+#logo {
+  display: inline-block;
+  color: $brand-secondary;
+  font-size: 1.125em;
+  line-height: normal;
+  font-weight: bold;
+  padding: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: -0.31em;
+}
+
+a {
+  .mdl-layout-title {
+    color: #333;
+  }
+}
+
+.mdl-layout-title:before {
+  content: "{";
+  color: #333;
+}
+
+.mdl-layout-title:after {
+  content: "}";
+  color: #333;
+}
+
+.mdl-layout-title:before,
+.mdl-layout-title:after {
+  position: relative;
+  top: -2.36842px;
+}
+
+.mdl-layout-title:before {
+  padding-right: 0.21em;
+}
+
+.mdl-layout-title:after {
+  padding-left: 0.21em;
+}
+
+.mdl-layout-title {
+  font-size: 2em;
+  .jp-slogan {
+    font-size: .8em;
+    font-style: italic;
   }
 }
 
@@ -220,9 +347,15 @@ code {
 
 code {
   padding: 2px 5px;
+  table {
+    pre {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
-pre {
+figure > pre {
   padding: 8px 12px;
   overflow-x: scroll;
 
@@ -231,5 +364,27 @@ pre {
     padding-right: 0;
     padding-left: 0;
   }
+  &.output {
+    margin-top: -22px;
+    padding-top: 0;
+  }
 }
 
+td.code {
+  padding: 0;
+  margin: 0;
+}
+
+.code pre {
+  margin: 0;
+}
+
+#disqus_thread {
+  margin-top: 20px;
+}
+
+@media screen and (max-device-width: 480px){
+  body{
+    -webkit-text-size-adjust: none;
+  }
+}

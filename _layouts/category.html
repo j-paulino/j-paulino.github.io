@@ -4,12 +4,12 @@ layout: default
 <h1 class="jp-page-tile">Musings on...
     <div class="jp-pill-box">
         {% for cat in site.categories %}
-            <span class="jp-pill" ><a href="/categories/{{cat[0]}}/">{{cat[0]}}</a></span>
+        <span class="jp-pill {%if cat[0] == page.category%}active{% endif %}"><a href="/categories/{{cat[0]}}/">{{cat[0]}}</a></span>
         {% endfor %}
     </div>
 </h1>
 <div class="jp-post-list">
-    {% for post in site.posts %}
+    {% for post in site.categories[page.category] %}
         {% include post_excerpt.html %}
     {% endfor %}
 </div>
